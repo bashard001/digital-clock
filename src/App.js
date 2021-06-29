@@ -15,7 +15,7 @@ componentDidMount(){
 }
 
 componentWillUnmount(){
-
+clearInterval(this.timerID)
 }
 
 live(){
