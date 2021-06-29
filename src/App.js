@@ -7,6 +7,22 @@ constructor(props){
   super(props)
   this.state = {date: new Date()}
 }
+componentDidMount(){
+  this.timerID = setInterval(
+    ()=> this.live(), 1000
+  )
+
+}
+
+componentWillUnmount(){
+
+}
+
+live(){
+  this.setState({
+    date: new Date()
+  })
+}
 
   render(){
   return (
